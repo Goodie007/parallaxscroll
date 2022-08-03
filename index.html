@@ -19,10 +19,10 @@
             <img src="assets/moon.png" id="moon">
             <img src="assets/mountains_behind.png" id="mountains_behind">
             <h2 id="text">Moon Light</h2>
-            <a href="#" id="btn">Explore</a>
+            <a href="#sec" id="btn">Explore</a>
             <img src="assets/mountains_front.png" id="mountains_front">
         </section>
-        <div class="sec">
+        <div class="sec" id="sec">
             <h2>Parallax Scrolling Effect</h2>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
@@ -64,5 +64,22 @@
                  popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
              </p>
         </div>
+
+        <script>
+            let stars = document.getElementById('star');
+            let moon = document.getElementById('moon');
+            let mountains_behind = document.getElementById('mountains_behind');
+            let text = document.getElementById('text');
+            let btn = document.getElementById('btn');
+            let mountains_front = document.getElementById('mountains_front');
+
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+                stars.style.left = value * 0.25 + 'px';
+                moon.style.top = value * 0.105 + 'px';
+
+            })
+
+        </script>
     </body>
 </html>
